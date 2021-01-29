@@ -16,6 +16,6 @@
         "sourceType": "module"
     },
     "rules": {
-        "no-restricted-syntax": ["error", "FunctionExpression", "WithStatement", "BinaryExpression[operator='in']"]
+        "no-restricted-syntax": ["error", "WithStatement", "BinaryExpression[operator='in']"]
     }
 }

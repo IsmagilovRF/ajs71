@@ -1,16 +1,10 @@
 // TODO: write your code here
-function getDescription(obj) {
-  const special = [];
-  for (const element of obj.special) {
-    const {
-      id, name, icon, description = 'Описание недоступно',
-    } = element;
-    const result = {
-      id, name, icon, description,
-    };
-    special.push(result);
+export default class Validator {
+  validateUsername(name) {
+    this.name = name;
+    return /^[a-z\d_-]+$/i.test(name)
+      && !/[\d]{4,}/.test(name)
+      && !/^[\d_-]/.test(name)
+      && !/[\d_-]$/.test(name);
   }
-  return special;
 }
-
-export default getDescription;
